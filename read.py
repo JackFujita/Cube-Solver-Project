@@ -2,12 +2,12 @@ import cv2 as cv
 import numpy as np
 
 
-img_counter = 0
+img_counter = 0  #pls explain
 
-capture = cv.VideoCapture(0)
+capture = cv.VideoCapture(0) #create a capture window (?)
 
-while True:
-    isTrue, frame = capture.read()
+while True: #loop until ESC pressed
+    isTrue, frame = capture.read() #frame must be the 
     cv.rectangle(frame, (frame.shape[1]//2-100,frame.shape[0]//2-100), (frame.shape[1]//2+100, frame.shape[0]//2+100), (255,255,255), 2)
     cv.imshow('Video', frame)
     
@@ -21,7 +21,7 @@ while True:
         img_name = "opencv_frame_{}.png".format(img_counter)
         cv.imwrite(img_name, frame)
         print("{} written!".format(img_name))
-        img_counter += 1
+        img_counter += 1 
         img = cv.imread(img_name)
 
         cv.imshow("img", img)
@@ -51,3 +51,11 @@ while True:
 
 capture.realease()
 cv.destroyAllWindows()
+
+
+
+#single
+
+'''
+multiline? maybe
+'''
